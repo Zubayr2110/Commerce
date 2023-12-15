@@ -499,3 +499,6 @@ export const SRightCT3I = styled.div`
   width: 100px;
   height: 30px;
 `
+export const SRightCDecI = styled.img`
+  cursor: pointer;
+`

@@ -9,7 +9,7 @@ import { useNavigate } from "react-router";
 import { getBasket, getProducts, getUser } from "./utils";
 import Data from "./components/Data.jsx";
 import { uid } from "uid";
-import reducer from "reducers/reducer.js";
+import reducer from "./reducer.jsx"
 
 const initialState = {
   amount: 0,
@@ -48,7 +48,6 @@ const AppProvider = ({ children }) => {
   const clearAll = () => {
     dispatch({type: "CLEAR"})
   }
-
 
   const login = () => {
     const newUser = { id: id, name: name, psw: password };

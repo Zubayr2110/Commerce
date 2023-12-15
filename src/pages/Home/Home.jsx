@@ -33,10 +33,12 @@ import {
   SRightCT3I,
 } from "../../components/Styled";
 import BasketCard from "../BasketCard/BasketCard";
+import Data from "../../components/Data";
+import BasketC from "../BasketCard/BasketC";
 
 export default function Home() {
   const navigate = useNavigate();
-  const { user, products, basket, total, amount } = useGlobalContext();
+  const { user, products, total, amount, clearAll } = useGlobalContext();
   return (
     <>
       <div className="conteiner">
@@ -97,7 +99,7 @@ export default function Home() {
         </div>
         <div className="main">
           <div className="main_content">
-            <header>  
+            <header>
               <div className="header_text">
                 <p className="header_text1" id="nicname">
                   {user.name}
@@ -144,6 +146,9 @@ export default function Home() {
               {products.map((item) => (
                 <HomeC key={item.id} {...item} />
               ))}
+              {Data.map((item) => (
+                <HomeC key={item.id} {...item} />
+              ))}
             </div>
           </div>
         </div>
@@ -164,9 +169,7 @@ export default function Home() {
               <li className="rightsidebar_content-2-item1">See All</li>
             </ul>
             <div className="rightsidebar_content-3">
-              {basket.map((item) => (
-                <BasketCard key={item.id} {...item} />
-              ))}
+              <BasketC />
             </div>
             <ul className="price">
               <li className="price-li">Total Price</li>
@@ -176,7 +179,9 @@ export default function Home() {
               <li className="price-li">Amount</li>
               <p className="price_li">{amount}</p>
             </ul>
-            <button className="buttonfn">Clear Basket</button>
+            <button className="buttonfn" onClick={() => clearAll()}>
+              Clear Basket
+            </button>
           </div>
         </div>
       </div>

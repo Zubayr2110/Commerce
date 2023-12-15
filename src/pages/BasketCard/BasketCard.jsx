@@ -2,6 +2,7 @@ import {
   SRightC,
   SRightC1,
   SRightC3,
+  SRightCDecI,
   SRightCImg,
   SRightCT,
   SRightCT2,
@@ -10,7 +11,7 @@ import {
 } from "../../components/Styled";
 
 import { useGlobalContext } from "../../context";
-import {decreaseImg, increseImg} from "../../components/export_img";
+import { decreaseImg, increseImg } from "../../components/export_img";
 
 export default function BasketCard({
   id,
@@ -20,8 +21,7 @@ export default function BasketCard({
   description,
   image,
 }) {
-
-  // const { rem, inc, dec, clearAll, amount, total} = useGlobalContext();
+  const { rem, inc, dec } = useGlobalContext();
 
   return (
     <SRightC>
@@ -32,9 +32,14 @@ export default function BasketCard({
         <SRightC3>
           <SRightCT3>${price}</SRightCT3>
           <SRightCT3I>
-            <img src={decreaseImg} alt="img" style={{ marginLeft: -10 }} />
+            <SRightCDecI
+              src={decreaseImg}
+              alt="img"
+              style={{ marginLeft: -10 }}
+              onClick={amount <= 1 ? () => rem(id) : () => dec(id)}
+            />
             <p className="numbers_text">{amount}</p>
-            <img src={increseImg} alt="img" />
+            <SRightCDecI src={increseImg} alt="img" onClick={() => inc(id)} />
           </SRightCT3I>
         </SRightC3>
       </SRightC1>

@@ -22,15 +22,15 @@ const reducer = (state, action) => {
   }
   if (action.type === "REMOVE") {
     let filtredItem = state.cart.filter((item) => item.id !== action.payload);
-    return { ...state, data: filtredItem };
+    return { ...state, cart: filtredItem };
   }
   // if (action.type === "AMOUNTI") {
   //   let priceP = 0;
   //   let totalPrice = state.basket.map((item) => (priceP += item.price));
   //   return { ...state, total: totalPrice };
   // }
-  if (action.type === "TOTALP") {
-    let { total, amount } = state.basket.reduce(
+  if (action.type === "TOTAL") {
+    let { total, amount } = state.cart.reduce(
       (ctotal, citem) => {
         const { price, amount } = citem;
         const itemTotal = price * amount;
@@ -46,3 +46,4 @@ const reducer = (state, action) => {
     return { ...state, total, amount };
   }
 };
+export default reducer;

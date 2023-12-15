@@ -19,3 +19,6 @@ export { default as decreaseImg } from "../assets/decrease.svg";
 export { default as increseImg } from "../assets/increse.svg";
 export { default as pizzaimg } from "../assets/Pepperoni-Pizza 1.png";
 export { default as rightSI1P } from "../assets/toppng 1.png";
+export { default as rightSI2P } from "../assets/toppng 2.png";
+export { default as pngaaaimg } from "../assets/pngaaa 1.png";
+export { default as Pepperoniimgpizza } from "../assets/Pepperoni-Pizza 1.png";
