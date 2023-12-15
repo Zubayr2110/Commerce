@@ -1,5 +1,5 @@
+import { useNavigate } from "react-router";
 import {
-  AccaunBalanceImg,
   ChatbubbleImg,
   EmailImgL,
   GroupImg,
@@ -15,10 +15,28 @@ import {
   UnsplashImg,
   decreaseImg,
   increseImg,
+  pizzaimg,
+  rightSI1P,
 } from "../../components/export_img";
+
 import "./Home.css";
+import { useGlobalContext } from "../../context";
+import HomeC from "./HomeC";
+import {
+  SRightC,
+  SRightC1,
+  SRightC3,
+  SRightCImg,
+  SRightCT,
+  SRightCT2,
+  SRightCT3,
+  SRightCT3I,
+} from "../../components/Styled";
+import BasketCard from "../BasketCard/BasketCard";
 
 export default function Home() {
+  const navigate = useNavigate();
+  const { user, products, basket, total, amount } = useGlobalContext();
   return (
     <>
       <div className="conteiner">
@@ -31,19 +49,21 @@ export default function Home() {
                 className="leftsidebar_content-button1-img"
               />
             </button>
-            <button className="leftsidebar_content-button2">
+            <button
+              className="leftsidebar_content-button2"
+              onClick={() => navigate("/signin/user")}
+            >
               <img
                 src={PersonImg}
                 alt="img"
                 className="leftsidebar_content-button2-img"
               />
             </button>
-            <button className="leftsidebar_content-button3">
-              <img
-                src={AccaunBalanceImg}
-                alt="img"
-                className="leftsidebar_content-button2-img"
-              />
+            <button
+              className="leftsidebar_content-button3"
+              onClick={() => navigate("/addpizza")}
+            >
+              <i className="fa-solid fa-cart-plus"></i>
             </button>
             <button className="leftsidebar_content-button3">
               <img
@@ -77,10 +97,10 @@ export default function Home() {
         </div>
         <div className="main">
           <div className="main_content">
-            <header>
+            <header>  
               <div className="header_text">
                 <p className="header_text1" id="nicname">
-                  Zubayr
+                  {user.name}
                 </p>
                 <p className="header_text2">Welcome Back</p>
               </div>
@@ -121,26 +141,9 @@ export default function Home() {
               <p className="menu_text2">See All</p>
             </div>
             <div className="items">
-              <div className="items1">
-                <h3>
-                  Pizza <br /> with Peperoni
-                </h3>
-                <p className="items1-2">14-20 minutes</p>
-                <div className="items1-3">
-                  <p id="text"></p>
-                  <button id="btn">+</button>
-                </div>
-              </div>
-              <div className="items2">
-                <h3>
-                  Pizza <br /> with Cheese
-                </h3>
-                <p className="items1-2">16-25 minutes</p>
-                <div className="items1-3">
-                  <p id="tex">1</p>
-                  <button id="bt">+</button>
-                </div>
-              </div>
+              {products.map((item) => (
+                <HomeC key={item.id} {...item} />
+              ))}
             </div>
           </div>
         </div>
@@ -148,7 +151,7 @@ export default function Home() {
           <div className="rightsidebar_content">
             <div className="rightsidebar_content-1">
               <img src={UnsplashImg} alt="" />
-              <p className="rightsidebar_content-1-text">Zubayr To'lqinov</p>
+              <p className="rightsidebar_content-1-text">{user.name}</p>
               <img
                 src={NotificationImg}
                 alt="img"
@@ -161,42 +164,19 @@ export default function Home() {
               <li className="rightsidebar_content-2-item1">See All</li>
             </ul>
             <div className="rightsidebar_content-3">
-              <div className="rightsidebar_content-3-1">
-                <p className="rightsidebar_content-3-1-1">
-                  Pizza with Mushrooms
-                </p>
-                <p className="rightsidebar_content-3-1-2">8 inch</p>
-                <p className="rightsidebar_content-3-1-3">$12</p>
-                <div className="numbers">
-                  <img
-                    src={decreaseImg}
-                    alt="img"
-                    style={{ marginLeft: -10 }}
-                  />
-                  <p className="numbers_text">01</p>
-                  <img src={increseImg} alt="img" />
-                </div>
-              </div>
-              <div className="rightsidebar_content-3-2">
-                <p className="rightsidebar_content-3-1-1">Meat with Potato</p>
-                <p className="rightsidebar_content-3-1-2">Extra tomato </p>
-                <p className="rightsidebar_content-3-1-3">$40</p>
-                <div className="numbers">
-                  <img
-                    src={decreaseImg}
-                    alt="img"
-                    style={{ marginLeft: -10 }}
-                  />
-                  <p className="numbers_text">01</p>
-                  <img src={increseImg} alt="img" />
-                </div>
-              </div>
+              {basket.map((item) => (
+                <BasketCard key={item.id} {...item} />
+              ))}
             </div>
             <ul className="price">
               <li className="price-li">Total Price</li>
-              <p className="price_li">$52</p>
+              <p className="price_li">${total}</p>
             </ul>
-            <button className="buttonfn">Checkout</button>
+            <ul className="price">
+              <li className="price-li">Amount</li>
+              <p className="price_li">{amount}</p>
+            </ul>
+            <button className="buttonfn">Clear Basket</button>
           </div>
         </div>
       </div>

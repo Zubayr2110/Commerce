@@ -8,14 +8,7 @@ export const SFooter = styled.footer`
   padding: 10px;
   bottom: 0;
   width: 100%;
-`
-
-
-
-
-
-
-
+`;
 
 // Sign In Styled Components
 
@@ -37,6 +30,9 @@ export const StyledSignInDiv = styled.div`
   border: 2px solid green;
 `;
 export const StyledSignInH1 = styled.h1`
+  width: 100%;
+  margin-left: 0;
+  margin-top: -39px;
   text-align: center;
   color: var(--foundation-grey-grey-900, #151515);
   font-family: sans-serif;
@@ -82,7 +78,6 @@ export const StyledSignInFrame12 = styled.button`
   background-color: white;
 `;
 export const StyledSignInFrame1Text = styled.p`
-  margin-top: 15px;
   color: var(--foundation-grey-grey-900, #151515);
   font-family: sans-serif;
   font-size: 16px;
@@ -100,7 +95,7 @@ export const StyledSignInDisting = styled.div`
 `;
 
 export const StyledSignInDistinghr1 = styled.div`
-margin-top: -16px;
+  margin-top: -16px;
   width: 120px;
   border: 1px solid;
 `;
@@ -197,13 +192,6 @@ export const StyledSignInSBtnSpan = styled.a`
 `;
 // Sign In Styled Components end
 
-
-
-
-
-
-
-
 // Single Page Styled
 
 export const SSingleCOImg1 = styled.img`
@@ -212,14 +200,16 @@ export const SSingleCOImg1 = styled.img`
   border-radius: 10px;
 `;
 export const SSingleCOT = styled.div`
+
   padding: 50px;
   width: 60%;
   height: 80%;
-  border: var(--border);
   text-align: center;
 `;
 export const SSingleCOTH1 = styled.h1`
-  font-size: 30px;
+  margin: 0 auto;
+  color: black;
+  font-size: 45px;
   font-weight: bold;
   font-family: sans-serif;
 `;
@@ -268,3 +258,244 @@ export const SSDingleCOTBtn2 = styled.button`
 `;
 
 // Single Page Styled end
+
+// AddProduct Styled Components
+
+export const AddPStyled = styled.div`
+  margin-top: -100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // border: 1px solid;
+`;
+export const AddPStyledBakcBtn = styled.button`
+  margin-top: -350px;
+  width: 80px;
+  height: 35px;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: greenyellow;
+`
+export const AddPSContext = styled.div`
+  width: 80%;
+  // border: 1px solid;
+`;
+export const AddPSContextH1 = styled.h1`
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+`;
+export const AddPSCD = styled.form`
+  padding: 25px;
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 500px;
+  height: 560px;
+  border: 2px solid green;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px 1px greenyellow;
+`;
+export const AddPSCFP = styled.label`
+  font-weight: bold;
+  font-size: 20px;
+`;
+export const AddPSCFInp = styled.input`
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 50px;
+  outline: none;
+  font-size: 25px;
+  border: 2px solid green;
+  border-radius: 10px;
+`;
+export const AddPSCFP1 = styled.label`
+  font-weight: bold;
+  font-size: 20px;
+`;
+export const AddPSCFTAREA = styled.input`
+  margin-top: 20px;
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid green;
+  outline: none;
+  font-size: 25px;
+`;
+export const AddPSFBSEND = styled.button`
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: greenyellow;
+  font-size: 25px;
+  font-weight: bold;
+`;
+export const AddPSI = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-column: auto auto auto auto;
+`;
+// AddProduct Styled Components end
+
+// Home styled Components
+
+export const SHomeItem = styled.div`
+  margin-top: 40px;
+  display: flex;
+  width: 498px;
+  height: 257px;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 2px 6px 30px 0px rgba(0, 0, 0, 0.1);
+`;
+export const SHomeItemC = styled.div`
+  padding-top: 30px;
+
+  height: 100%;
+  margin-left: 15px;
+`;
+export const SHomeItemH3 = styled.h3`
+  color: #000;
+  max-height: 70px;
+  max-width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94.687%;
+  letter-spacing: 1.08px;
+`;
+export const SHomeItemImg = styled.img`
+  cursor: pointer;
+  height: 100%;
+  width: 210px;
+  max-width: 210px;
+  border-radius: 30px;
+`;
+export const SHomeItemD = styled.p`
+  cursor: pointer;
+  margin-top: 30px;
+  color: #b4bccf;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 144.687%;
+  letter-spacing: 0.6px;
+  max-height: 30px;
+`;
+export const SHomeItemB = styled.div`
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  margin-top: 40px;
+`;
+export const SHomeItemBT = styled.p`
+  cursor: pointer;
+  color: #01c550;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144.687%;
+  letter-spacing: 0.96px;
+`;
+export const SHomeItemBBtn = styled.button`
+  cursor: pointer;
+  margin-left: 150px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 45px;
+  background-color: #ffffff;
+`;
+
+
+
+
+
+
+
+
+
+// right sidebar styled components
+
+export const SRightC = styled.div`
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  border-radius: 20px;
+  background: rgba(180, 188, 207, 0.30);
+  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.10);
+`
+
+export const SRightCImg = styled.img`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  max-width: 120px;
+  width: 120px;
+  height: 100%;
+`
+
+export const SRightC1 = styled.div`
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+`
+
+export const SRightCT = styled.p`
+  color: #000;
+  font-family: 'Roboto',sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+`
+export const SRightCT2 = styled.p`
+  margin-top: 10px;
+  color: #61656F;
+  font-family: 'Roboto',  sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+`
+export const SRightC3 = styled.div`
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+`
+export const SRightCT3 = styled.p`
+  margin-top: 10px;
+  color: #01C550;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+`
+export const SRightCT3I = styled.div`
+  margin-left: 120px;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+`

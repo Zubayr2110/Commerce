@@ -11,7 +11,7 @@
     margin: 0 auto;
     display: flex;
     width: 1728px;
-    height: 1117px;
+    height: 100%;
     border: var(--border);
 }
 
@@ -20,13 +20,13 @@
     left: 0;
     position: fixed;
     width: 105px;
-    height: 1117px;
+    height: 100%;
     border: var(--border);
     background: #FFF;
     box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
 }
 .leftsidebar_content{
-    margin-top: 116px;
+    margin-top: 16px;
     margin-left: 21px;
     width: 65px;
     height: 720px;
@@ -44,6 +44,7 @@
     box-shadow: 0px 4px 15px 0px rgba(255, 138, 0, 0.25);
 }
 .leftsidebar_content-button2{
+    cursor: pointer;
     margin-left: 11px;
     margin-top: 65px;
     width: 40px;
@@ -53,6 +54,7 @@
 }
 
 .leftsidebar_content-button3{
+    cursor: pointer;
     margin-left: 11px;
     margin-top: 65px;
     width: 40px;
@@ -66,16 +68,17 @@
 
 
 .main{
+    margin: 0 auto;
     width: 1097px;
-    height: 1117px;
+    height: 100%;
     border: var(--border);
-    background-color: rgba(233, 233, 233, 0.41);
+    /* background-color: rgba(233, 233, 233, 0.41); */
 }
 .main_content{
     margin-top: 67px;
     margin-left: 35px;
     width: 1025px;
-    height: 995px;
+    height: 100%;
     border: var(--border);
 }
 header{
@@ -88,7 +91,6 @@ header{
 .header_text{
     width: 186px;
     height: 100%;
-
 }
 .header_text1{
     color: #B4BCCF;
@@ -268,11 +270,13 @@ span{
 
 
 .items{
-    display: flex;
-    margin-top: 87px;
+    display: grid;
+    grid-template-columns: auto auto;
+    /* margin-top: 87px; */
+    margin-bottom: 40px;
     width: 1030px;
-    height: 257px;
-    /* border: 1px solid; */
+    height: 100%;
+    border: var(--border);
 }
 .items1{
     width: 498px;
@@ -281,98 +285,13 @@ span{
     border-radius: 30px;
     background: #FFF;
     box-shadow: 2px 6px 30px 0px rgba(0, 0, 0, 0.10);
-    background-image: url(/src/assets/Pepperoni-Pizza\ 1.png);
+    /* background-image: url(/src/assets/Pepperoni-Pizza\ 1.png); */
     background-repeat: no-repeat;
 }
-h3{
-    margin-left: 232px;
-    padding-top: 39px;
-    width: 236px;
-    height: 79px;   
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 33px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 94.687%; /* 34.087px */
-    letter-spacing: 1.08px;
-}
-.items1-2{
-    margin-left: 232px;
-    padding-top: 46px;
-    color: #B4BCCF;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 144.687%; /* 28.937px */
-    letter-spacing: 0.6px;
-}
-.items1-3{
-    margin-left: 232px;
-    display: flex;
-}
-#text{
-    padding-top: 20px;
-    color: #01C550;
-    font-family: 'Roboto', sans-serif;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 144.687%;
-    letter-spacing: 0.96px;
-}
-#btn{
-    padding-bottom: 50px;
-    margin-top: 30px;
-    margin-left: 106px;
-    width: 70px;
-    height: 40px;
-    border: none;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 45px;
-    background-color: #ffffff;
-}
-#btn:hover{
+.homeincbtn:hover{
     background-color: rgb(222, 222, 222);
 }
-#tex{
-    padding-top: 20px;
-    color: #01C550;
-    font-family: 'Roboto', sans-serif;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 144.687%;
-    letter-spacing: 0.96px;
-}
-#bt{
-    padding-bottom: 50px;
-    margin-top: 30px;
-    margin-left: 106px;
-    width: 70px;
-    height: 40px;
-    border-radius: 15px;
-    border: none;
-    text-align: center;
-    font-size: 45px;
-    background-color: #ffffff;
-}
-#bt:hover{
-    background-color: rgb(222, 222, 222);
-}
-.items2{
-    margin-left: 35px;
-    width: 498px;
-    height: 257px;
-    flex-shrink: 0;
-    border-radius: 30px;
-    background: #FFF;
-    box-shadow: 2px 6px 30px 0px rgba(0, 0, 0, 0.10);
-    background-image: url(/src/assets/toppng\ 2.png);
-    background-repeat: no-repeat;
-}
+
 
 
 
@@ -381,18 +300,18 @@ h3{
 
 .rightsidebar{
     width: 533px;
-    height: 1117px;
+    height: 100%;
+    right: 0;
     flex-shrink: 0;
-    border: var(--border);
     background: #FFF;
     box-shadow: -4px 0px 30px 0px rgba(0, 0, 0, 0.05);
 }
 .rightsidebar_content{
-    margin-top: 72px;
+    margin-top: 10px;
     margin-left: 32px;
     width: 442px;
-    height: 987px;
-    /* border: 1px solid; */
+    height: 100%;
+    margin-bottom: 150px;
 }
 .rightsidebar_content-1{
     display: flex;
@@ -454,19 +373,9 @@ h3{
     margin-top: 46px;
     margin-left: 10px;
     width: 407px;
-    height: 279px;
+    height: 100%;
 }
-.rightsidebar_content-3-1{
-    width: 100%;
-    height: 120px;
-    border-radius: 20px;
-    background: rgba(180, 188, 207, 0.30);
-    box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.10);
-    background-image: url(/src/assets/toppng\ 1.png);
-    background-repeat: no-repeat;
-    background-position-y: 17px;
-    background-position-x: 16px;
-}
+
 .rightsidebar_content-3-1-1{
     margin-left: 125px;
     padding-top: 25px;
@@ -497,8 +406,6 @@ h3{
     font-weight: 700;
     line-height: normal;
 }
-
-
 .numbers{
     margin-top: -21px;
     margin-left: 288px;
@@ -562,6 +469,7 @@ h3{
 
 
 .buttonfn{
+    cursor: pointer;
     margin-left: 140px;
     margin-top: 50px;
     width: 165px;
@@ -577,4 +485,8 @@ h3{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.leftsidebar_content-button3 {
+    font-size: 35px;
 }

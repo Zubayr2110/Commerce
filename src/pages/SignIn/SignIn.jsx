@@ -1,7 +1,29 @@
-import { StyledSignInBtn, StyledSignInContainer, StyledSignInDisting, StyledSignInDistinghr1, StyledSignInDistingtext, StyledSignInDiv, StyledSignInForm, StyledSignInFormInp, StyledSignInFormInp1, StyledSignInFormInp2, StyledSignInFormInpLabel, StyledSignInFrame1, StyledSignInFrame11, StyledSignInFrame12, StyledSignInFrame1Text, StyledSignInH1, StyledSignInSBtn, StyledSignInSBtnP, StyledSignInSBtnSpan } from "../../components/Styled";
+import {
+  StyledSignInBtn,
+  StyledSignInContainer,
+  StyledSignInDisting,
+  StyledSignInDistinghr1,
+  StyledSignInDistingtext,
+  StyledSignInDiv,
+  StyledSignInForm,
+  StyledSignInFormInp,
+  StyledSignInFormInp1,
+  StyledSignInFormInp2,
+  StyledSignInFormInpLabel,
+  StyledSignInFrame1,
+  StyledSignInFrame11,
+  StyledSignInFrame12,
+  StyledSignInFrame1Text,
+  StyledSignInH1,
+  StyledSignInSBtn,
+  StyledSignInSBtnP,
+  StyledSignInSBtnSpan,
+} from "../../components/Styled";
+import { useGlobalContext } from "../../context.jsx";
+
 import { SignUpImg1, SignUpImg2 } from "../../components/export_img";
 export default function SignIn() {
-
+  const { name, setName, password, setPassword, login } = useGlobalContext();
   return (
     <StyledSignInContainer>
       <StyledSignInDiv>
@@ -27,9 +49,11 @@ export default function SignIn() {
           <StyledSignInDistinghr1 />
         </StyledSignInDisting>
 
-        <StyledSignInForm>
+        <StyledSignInForm onSubmit={login}>
           <StyledSignInFormInp>
-            <StyledSignInFormInpLabel>Your username</StyledSignInFormInpLabel>
+            <StyledSignInFormInpLabel>
+              Enter your first name
+            </StyledSignInFormInpLabel>
             <StyledSignInFormInp1
               placeholder="Enter your username"
               required
@@ -52,12 +76,6 @@ export default function SignIn() {
             <StyledSignInBtn type="submit" onClick={() => navigate("/")}>
               Sign In
             </StyledSignInBtn>
-            <StyledSignInSBtnP>
-              Already signed up?{" "}
-              <StyledSignInSBtnSpan href="/signup/user">
-                Go to sign up.
-              </StyledSignInSBtnSpan>
-            </StyledSignInSBtnP>
           </StyledSignInSBtn>
         </StyledSignInForm>
       </StyledSignInDiv>

@@ -17,3 +17,5 @@ export { default as UnsplashImg } from "../assets/unsplash_WNoLnJo7tS8.svg";
 export { default as NotificationImg } from "../assets/Notifications none.svg";
 export { default as decreaseImg } from "../assets/decrease.svg";
 export { default as increseImg } from "../assets/increse.svg";
+export { default as pizzaimg } from "../assets/Pepperoni-Pizza 1.png";
+export { default as rightSI1P } from "../assets/toppng 1.png";

@@ -24,9 +24,25 @@ const reducer = (state, action) => {
     let filtredItem = state.cart.filter((item) => item.id !== action.payload);
     return { ...state, data: filtredItem };
   }
-  if (action.type === "TOTAL") {
-    let priceP = 0;
-    let totalPrice = state.cart.map((item) => (priceP += item.price));
-    return { ...state, total: totalPrice };
+  // if (action.type === "AMOUNTI") {
+  //   let priceP = 0;
+  //   let totalPrice = state.basket.map((item) => (priceP += item.price));
+  //   return { ...state, total: totalPrice };
+  // }
+  if (action.type === "TOTALP") {
+    let { total, amount } = state.basket.reduce(
+      (ctotal, citem) => {
+        const { price, amount } = citem;
+        const itemTotal = price * amount;
+        ctotal.total += itemTotal;
+        ctotal.amount += amount;
+        return ctotal;
+      },
+      {
+        total: 0,
+        amount: 0,
+      }
+    );
+    return { ...state, total, amount };
   }
 };

@@ -7,7 +7,7 @@ export default function Single() {
     const { products } = useGlobalContext()
   const { id } = useParams();
   const singleProduct = products.find((item) => item.id === id);
-  const { image, title, description, price, category } = singleProduct;
+  const { image, title, description, price } = singleProduct;
   return (
     <>
       <div className="singleC">
