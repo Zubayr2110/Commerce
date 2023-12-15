@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { getBasket, getProducts, getUser } from "./utils";
 import Data from "./components/Data.jsx";
+import { uid } from "uid";
 
 const initialState = {
   amount: 0,
@@ -12,7 +13,10 @@ const initialState = {
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
+  const id = uid()
+
   const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
@@ -66,12 +70,14 @@ const AppProvider = ({ children }) => {
     localStorage.setItem("user", JSON.parse(user));
     localStorage.setItem("basket", JSON.stringify(basket));
     localStorage.setItem("products", JSON.stringify(products));
+
   }, [user, products, basket]);
   return (
     <AppContext.Provider
       value={{
         login,
         addBasket,
+        addProduct,
         basket,
         setBasket,
         name,

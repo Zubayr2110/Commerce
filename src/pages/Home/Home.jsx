@@ -1,3 +1,21 @@
+import {
+  AccaunBalanceImg,
+  ChatbubbleImg,
+  EmailImgL,
+  GroupImg,
+  GroupImg2,
+  GroupImg3,
+  GroupImg4,
+  MenuBook,
+  NotificationImg,
+  PersonImg,
+  Piechartimg,
+  SearchImg,
+  SettingsImgSL,
+  UnsplashImg,
+  decreaseImg,
+  increseImg,
+} from "../../components/export_img";
 import "./Home.css";
 
 export default function Home() {
@@ -8,49 +26,49 @@ export default function Home() {
           <div className="leftsidebar_content">
             <button className="leftsidebar_content-button1">
               <img
-                src="/images/Menu book.svg"
+                src={MenuBook}
                 alt="img"
                 className="leftsidebar_content-button1-img"
               />
             </button>
             <button className="leftsidebar_content-button2">
               <img
-                src="/images/Person.svg"
+                src={PersonImg}
                 alt="img"
                 className="leftsidebar_content-button2-img"
               />
             </button>
             <button className="leftsidebar_content-button3">
               <img
-                src="/images/Account balance wallet.svg"
+                src={AccaunBalanceImg}
                 alt="img"
                 className="leftsidebar_content-button2-img"
               />
             </button>
             <button className="leftsidebar_content-button3">
               <img
-                src="/images/Settings.svg"
+                src={SettingsImgSL}
                 alt="img"
                 className="leftsidebar_content-button2-img"
               />
             </button>
             <button className="leftsidebar_content-button3">
               <img
-                src="/images/Email.svg"
+                src={EmailImgL}
                 alt="img"
                 className="leftsidebar_content-button2-img"
               />
             </button>
             <button className="leftsidebar_content-button3">
               <img
-                src="/images/Pie chart.svg"
+                src={Piechartimg}
                 alt="img"
                 className="leftsidebar_content-button2-img"
               />
             </button>
             <button className="leftsidebar_content-button3">
               <img
-                src="/images/Chat bubble.svg"
+                src={ChatbubbleImg}
                 alt="img"
                 className="leftsidebar_content-button2-img"
               />
@@ -67,11 +85,7 @@ export default function Home() {
                 <p className="header_text2">Welcome Back</p>
               </div>
               <form className="searchbar">
-                <img
-                  src="/images/Search.svg"
-                  alt="img"
-                  className="searchbar_img"
-                />
+                <img src={SearchImg} alt="img" className="searchbar_img" />
                 <input type="text" id="header_search" placeholder="Search" />
               </form>
             </header>
@@ -89,19 +103,19 @@ export default function Home() {
             <div className="menu">
               <p className="menu_text1">Our Menu</p>
               <div className="menu_content">
-                <img src="/images/Group 2.svg" alt="img" />
+                <img src={GroupImg} alt="img" />
                 <p className="menu_content-text">Pizza</p>
               </div>
               <div className="menu_content1">
-                <img src="/images/Group 2 (1).svg" alt="img" />
+                <img src={GroupImg2} alt="img" />
                 <p className="menu_content-text">Burger</p>
               </div>
               <div className="menu_content1">
-                <img src="/images/Group 2 (2).svg" alt="img" />
+                <img src={GroupImg3} alt="img" />
                 <p className="menu_content-text">Fries</p>
               </div>
               <div className="menu_content1">
-                <img src="/images/Group 2 (3).svg" alt="img" />
+                <img src={GroupImg4} alt="img" />
                 <p className="menu_content-text">Pack</p>
               </div>
               <p className="menu_text2">See All</p>
@@ -133,10 +147,10 @@ export default function Home() {
         <div className="rightsidebar">
           <div className="rightsidebar_content">
             <div className="rightsidebar_content-1">
-              <img src="/images/unsplash_WNoLnJo7tS8.svg" alt="" />
+              <img src={UnsplashImg} alt="" />
               <p className="rightsidebar_content-1-text">Zubayr To'lqinov</p>
               <img
-                src="/images/Notifications none.svg"
+                src={NotificationImg}
                 alt="img"
                 className="rightsidebar_content-1-n"
               />
@@ -155,12 +169,12 @@ export default function Home() {
                 <p className="rightsidebar_content-3-1-3">$12</p>
                 <div className="numbers">
                   <img
-                    src="/images/decrease.svg"
+                    src={decreaseImg}
                     alt="img"
                     style={{ marginLeft: -10 }}
                   />
                   <p className="numbers_text">01</p>
-                  <img src="/images/increse.svg" alt="img" />
+                  <img src={increseImg} alt="img" />
                 </div>
               </div>
               <div className="rightsidebar_content-3-2">
@@ -169,12 +183,12 @@ export default function Home() {
                 <p className="rightsidebar_content-3-1-3">$40</p>
                 <div className="numbers">
                   <img
-                    src="/images/decrease.svg"
+                    src={decreaseImg}
                     alt="img"
                     style={{ marginLeft: -10 }}
                   />
                   <p className="numbers_text">01</p>
-                  <img src="/images/increse.svg" alt="img" />
+                  <img src={increseImg} alt="img" />
                 </div>
               </div>
             </div>
